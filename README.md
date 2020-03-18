@@ -1,16 +1,16 @@
-# Wrote code to append a table to a web page and adds a row with a UFO sighting from a dataset (data.js) in the form of an array of javascript Objects.
+### Wrote code to append a table to a web page and adds a row with a UFO sighting from a dataset (data.js) in the form of an array of javascript Objects.
 
 ![UFO Zoom-In]("UFO.JPG")
 ![Table]("Filter.JPG")
 
-# HTML code for zoom-in animation
+### HTML code for zoom-in animation
 ```html
     <div class="hero text-center">
       <h1>UFO Sightings</h1>
       <p>The Truth is Out There</p>
     </div>
 ```
-# HTML code for the table
+### HTML code for the table
 ```html
           <div id="table-area" class="">
             <table id="ufo-table" class="table table-striped">
@@ -28,7 +28,7 @@
               <tbody></tbody>
             </table>
 ```
-# JavaScript buildtable function
+### JavaScript buildtable function
 ```javascript
 var tbody = d3.select("tbody");
 function buildTable(data) {
@@ -46,7 +46,7 @@ function buildTable(data) {
 }
 ```
 
-# JavaScript code that will listen for events and search through the `date/time` column to find rows that match user input
+### JavaScript code that will listen for events and search through the `date/time` column to find rows that match user input
 ```Javascript
 var button = d3.select("#filter-btn");
 button.on("click", function() {
@@ -66,7 +66,7 @@ button.on("click", function() {
 });
 buildTable(tableData);
 ```
-# javascript filter function
+### javascript filter function
 ```javascript
 var filters = {};
 function updateFilters() {
@@ -82,7 +82,7 @@ function updateFilters() {
 d3.selectAll(".filter").on("change",updateFilters);
 ```
 
-# filter in html
+### filter in html
 ```html
 <div class="panel-body">
                 <form>
